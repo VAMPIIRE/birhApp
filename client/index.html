@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Foundation for Apps</title>
+        <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+        <script src="./assets/js/foundation.js"></script>
+        <script src="./assets/js/templates.js"></script>
+        <script src="./assets/js/routes.js"></script>
+        <script src="./assets/js/app.js"></script>
+    </head>
+    <body>
+        <div class="grid-frame vertical">
+            <div class="dark title-bar">
+                <div class="center title"><a ui-sref="home">bReminder</a></div>
+            </div>
+            <div class="grid-block">
+                <div id="sidebar" class="medium-3 grid-block">
+                    <div id="filter" class="sidebar-block">1</div>
+                </div>
+                <div id="main" class="medium-9 grid-content">
+                    <div class="grid-block">
+                        <span  id="searchBlock" class="inline-label">
+                            <input type="search" placeholder="Search a thing">
+                            <a href="#" class="button">Search</a>
+                        </span>
+                    </div>
+                    <div class="grid-block">3</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
