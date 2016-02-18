@@ -1,0 +1,18 @@
+#filter {
+    width: 100%;
+}
+.wrapper {
+    margin-top: 10px;
+}
+.filter-section {
+    padding-top: 10px;
+}
+.filter-content {
+    padding-top: 10px;
+}
+.age_filter {
+    width: 45% !important;
+}
+.age_filter:first-child {
+    margin-right: 5% !important;
+}

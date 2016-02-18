@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Foundation for Apps</title>
         <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+        <link href="./css/mystyle.css" rel="stylesheet" type="text/css">
         <script src="./assets/js/foundation.js"></script>
         <script src="./assets/js/templates.js"></script>
         <script src="./assets/js/routes.js"></script>
@@ -16,91 +17,55 @@
                 <div class="center title"><a ui-sref="home">bReminder</a></div>
             </div>
             <div class="grid-block wrapper">
-                <!-- Sidebar -->
-                <div id="sidebar" class="small-12 medium-3 grid-block">
-                    <div id="filter">
-                        <div class="card">
-                             <div class="card-divider">Фильтр</div>
+                
+            <!-- Sidebar -->
+            <div id="sidebar" class="small-12 medium-3 grid-block small-order-2 medium-order-1">
+                <div id="filter">
+                    <div class="card">
+                        <div class="card-divider">Статистика</div>
+                        <div class="card-section">
+                            Какие-то виджеты
                         </div>
                     </div>
                 </div>
-                <!-- Sidebar end -->
+            </div>
+            <!-- Sidebar end -->
 
-                <!-- Content area -->
-                <div id="main" class="small-12 medium-9 grid-content">
-                    <div id="main-header">
-                        <span  id="searchBlock" class="inline-label">
-                            <input type="search" placeholder="Search a thing">
-                            <a href="#" class="button">Search</a>
-                        </span>
+            <!-- Content area -->
+            <div id="main" class="small-12 medium-9 large-9 grid-content small-order-1 medium-order-2">
+                <div class="page-block card">
+                    <div class="card-divider grid-block">
+                        <div class="grid-content large-3">
+                            <a href="#">Назад</a>
+                        </div>
+                        <div class="grid-content large-9">
+                            <center>Опции</center>
+                        </div>
                     </div>
-                    <div id="main-content" class="grid-block medium-up-4">
-                            <div class="grid-content">
-                                <div class="primary card">
-                                    <div class="card-divider">Алиева Алина</div>
-                                    <img src="http://placehold.it/350x250">
-                                    <div class="card-section">
-                                        Город: Бишкек
+                    <div class="card-section">
+                        <section class="block-list">
+                            <header>Подключить соц. сети:</header>
+                            <ul>
+                                <li>
+                                    <span>Вконтакте</span>
+                                    <div class="switch">
+                                        <input type="checkbox" id="vk_access">
+                                        <label for="vk_access"></label>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="grid-content">
-                                <div class="primary card">
-                                    <div class="card-divider">Алиева Алина</div>
-                                    <img src="http://placehold.it/350x250">
-                                    <div class="card-section">
-                                        Город: Бишкек
+                                </li>
+                                <li>
+                                    <span>Одноклассники</span>
+                                    <div class="switch">
+                                        <input type="checkbox" id="ok_access">
+                                        <label for="ok_access"></label>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="grid-content">
-                                <div class="primary card">
-                                    <div class="card-divider">Алиева Алина</div>
-                                    <img src="http://placehold.it/350x250">
-                                    <div class="card-section">
-                                        Город: Бишкек
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-content">
-                                <div class="primary card">
-                                    <div class="card-divider">Алиева Алина</div>
-                                    <img src="http://placehold.it/350x250">
-                                    <div class="card-section">
-                                        Город: Бишкек
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-content">
-                                <div class="primary card">
-                                    <div class="card-divider">Алиева Алина</div>
-                                    <img src="http://placehold.it/350x250">
-                                    <div class="card-section">
-                                        Город: Бишкек
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-content">
-                                <div class="primary card">
-                                    <div class="card-divider">Алиева Алина</div>
-                                    <img src="http://placehold.it/350x250">
-                                    <div class="card-section">
-                                        Город: Бишкек
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-content">
-                                <div class="primary card">
-                                    <div class="card-divider">Алиева Алина</div>
-                                    <img src="http://placehold.it/350x250">
-                                    <div class="card-section">
-                                        Город: Бишкек
-                                    </div>
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
+                        </section>
                     </div>
-                </div>
-                <!-- Content area -->
+                </div>        
+            </div>
+            <!-- Content area -->
             </div>
         </div>
     </body>

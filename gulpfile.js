@@ -45,6 +45,9 @@ var paths = {
   // These files are for your app's JavaScript
   appJS: [
     'client/assets/js/app.js'
+  ],
+  appCss: [
+    'client/assets/css/mystyle.css'
   ]
 }
 
@@ -115,6 +118,12 @@ gulp.task('sass', function () {
   ;
 });
 
+gulp.task('mycss', function () {
+  return gulp.src(paths.appCss, {
+    base: './client/'
+  }).pipe(gulp.dest('./build/css/'));
+});
+
 // Compiles and copies the Foundation for Apps JavaScript, as well as your app's custom JS
 gulp.task('uglify', ['uglify:foundation', 'uglify:app'])
 
@@ -159,13 +168,15 @@ gulp.task('server', ['build'], function() {
 
 // Builds your entire app once, without starting a server
 gulp.task('build', function(cb) {
-  sequence('clean', ['copy', 'copy:foundation', 'sass', 'uglify'], 'copy:templates', cb);
+  sequence('clean', ['copy', 'copy:foundation', 'sass', 'uglify', 'mycss'], 'copy:templates', cb);
 });
 
 // Default task: builds your app, starts a server, and recompiles assets when they change
 gulp.task('default', ['server'], function () {
   // Watch Sass
   gulp.watch(['./client/assets/scss/**/*', './scss/**/*'], ['sass']);
+
+  gulp.watch(['./client/assets/css/**/*'], ['mycss']);
 
   // Watch JavaScript
   gulp.watch(['./client/assets/js/**/*', './js/**/*'], ['uglify:app']);
